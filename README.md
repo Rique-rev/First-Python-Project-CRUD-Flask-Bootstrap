@@ -32,7 +32,7 @@ Instale as bibliotecas necessárias:
 
 Execute o arquivo **.py**
 
-		python app.py
+	python app.py
 		
 ## Acessando a aplicação
 
