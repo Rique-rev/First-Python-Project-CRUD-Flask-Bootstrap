@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<br>
+<h1 style = "text-align: center">LISTA DE CLIENTES</h1>
+
+{% endblock %}
+
+
+
+{% block body %}
+   
+    <table class="table" style = "text-align: center">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Endereço</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Excluir</th>
+                <th scope="col">Atualizar Dados</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in tabela %}
+            <tr>
+                <td> {{ cliente.id }}</td>
+                <td> {{ cliente.nome }}</td>
+                <td> {{ cliente.endereco }}</td>
+                <td> {{ cliente.telefone }}</td>
+                <td> {{ cliente.email }}</td>
+                <td> <a href="/excluir/{{ cliente.id }}" class="btn btn-danger">X</a> </td>
+                <td> <a href="/atualizar/{{ cliente.id }}" class="btn btn-success">Atualizar</a> </td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

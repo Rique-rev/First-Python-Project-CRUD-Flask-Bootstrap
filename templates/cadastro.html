@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<br>
+<h1 style = "text-align: center">CADASTRO</h1>
+
+<br>
+<h5 style = "text-align: center">Insira os dados abaixo:</h5>
+
+
+{% endblock %}
+
+
+
+{% block body %}
+   
+
+    <form action="{{url_for('inserirDados')}}" method="POST">
+    <nav class="d-flex justify-content-center">
+        <table>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nome</label>
+                        <input type="text" name ="nome" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o nome">
+                    </div>
+                </td>
+            </tr>
+        
+            <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Endereço</label>
+                            <input type="text" name ="endereco" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu endereço">
+                        </div>
+                    </td>
+            </tr>
+        
+            <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Telefone</label>
+                            <input type="text" name ="telefone" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Número de telefone">
+                        </div>
+                    </td>
+            </tr>
+        
+            <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">E-mail</label>
+                            <input type="text" name ="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu e-mail">
+                        </div>
+                    </td>
+            </tr>
+
+            <br>
+
+        </table>
+    </nav>
+        <nav class="d-flex justify-content-center">
+            <input type="submit" value="Cadastrar" class="btn btn-primary">
+            <br>
+            
+        </nav>
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<br>
+<h1 style = "text-align: center">ATUALIZAÇÃO</h1>
+<h5 style = "text-align: center">Insira os novos dados abaixo:</h5>
+{% endblock %}
+
+
+
+{% block body %}
+<nav class="d-flex justify-content-center">
+    <form action="" method="POST">
+        <table>
+
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nome</label>
+                        <input type="text" name ="nome" value="{{ cliente.nome }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o novo nome">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Endereço</label>
+                            <input type="text" name ="endereco" value="{{ cliente.endereco }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o novo endereço">
+                        </div>
+                    </td>
+            </tr>
+
+            <tr>
+                    <td>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Telefone</label>
+                            <input type="text" name ="telefone" value="{{ cliente.telefone }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o novo telefone">
+                        </div>
+                    </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-mail</label>
+                        <input type="text" name ="email" value="{{ cliente.email }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite o novo e-mail">
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </nav>
+
+    <nav class="d-flex justify-content-center">
+        <input type="submit" value="Atualizar Dados" class="btn btn-primary"> 
+    </nav>
+
+    </form>  
+
+{% endblock %}

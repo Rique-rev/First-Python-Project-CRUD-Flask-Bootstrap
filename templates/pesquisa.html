@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<br>
+<h1 style = "text-align: center">PESQUISA</h1>
+
+{% endblock %}
+
+<nav class="navbar navbar-light bg-light">#
+    <form class="form-inline">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+    </form>
+  </nav>#
+
+{% block body %}
+    <table>
+        <tr>
+            <td>
+                <nav class="navbar navbar-light bg-light" >
+                    <form action="{{url_for('pesquisa')}}" class="navbar navbar-light bg-light" method="POST">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Nome</span>
+                            </div>
+                            <input type="text" name ="nome" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                        <input type="submit" value="Pesquisar" class="btn btn-primary">
+                        </div>
+                    <br>
+                </nav>
+            </td>
+        </tr>
+        
+    </table>
+    
+
+    <br>
+    <br>
+
+    <table class="table" style = "text-align: center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">E-mail</th>
+                </tr>
+            </thead>
+            <tbody>        
+                
+                {% for cliente in tabela %}
+                <tr>
+                    <td> {{ cliente.id }}</td>
+                    <td> {{ cliente.nome }}</td>
+                    <td> {{ cliente.endereco }}</td>
+                    <td> {{ cliente.telefone }}</td>
+                    <td> {{ cliente.email }}</td>
+                    
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+    
+
+    </form>
+
+{% endblock %}
